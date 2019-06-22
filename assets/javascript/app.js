@@ -3,7 +3,7 @@ var wrong = 0;
 var answers = [];
 var unanswered = 0;
 var questionNumber = 0;
-var time = 3;
+var time = 30;
 var timer
 var question = document.getElementById("question");
 // var choiceA1 = document.getElementById("A");
@@ -41,6 +41,7 @@ $("#start-btn").on("click", function () {
 
 var answerPicked=false
 var answerPicked2=false
+var answerPicked3=false
 
 document.getElementById("answerOne").addEventListener("click", myFunction);
 
@@ -95,6 +96,32 @@ function myFunction6() {
     answerPicked = true
   document.getElementById("answerSix").innerHTML = "Correct!";
   correct= correct +1
+}}
+
+
+
+document.getElementById("answerSeven").addEventListener("click", myFunction7);
+function myFunction7() {
+  if (answerPicked3===false){
+    answerPicked = true
+    document.getElementById("answerSeven").innerHTML = "Wrong!";
+wrong = wrong +1
+}}
+
+document.getElementById("answerEight").addEventListener("click", myFunction8);
+function myFunction8() {
+  if (answerPicked3===false){
+    answerPicked = true
+  document.getElementById("answerEight").innerHTML = "Wrong!";
+  correct = correct +1
+}}
+
+document.getElementById("answerNine").addEventListener("click", myFunction9);
+function myFunction9() {
+  if (answerPicked3===false){
+    answerPicked = true
+  document.getElementById("answerNine").innerHTML = "Correct!";
+  wrong= wrong +1
 }}
 
 // var currentQuestion = 0;
