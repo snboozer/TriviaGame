@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,31 +9,56 @@
 
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
 </head>
+
 <body>
     <br>
 
-<h1> The Last Dragon Quiz</h1>
+    <h1> The Last Dragon Quiz</h1>
 
-<div class= container>
+    <div class=container>
 
-<div id="start"> <button id= "start-btn">start</button></div>
-<div class="hidden" id="quiz">
-    <h1 id="clock">3</h1>
-    <h2 id="question"></h2>
-    <h4 class="choice" id="a"></h4>
-    <h4 class="choice" id="b"></h4>
-    <h4 class="choice" id="c"></h4>
-<div id="submit"> <button id= "submit-btn">submit</button></div>
-   
-</div>
-<div class="hidden" id="score">Score</div>
+        <div id="start"> <button id="start-btn">start</button></div>
+        <div class="hidden" id="quiz">
+            <h1 id="clock">30</h1>
+            <div class="questionsAll">
+                <h2 id="questionOne"> Who's the master?</h2>
+                <p id="answerOne">Sho'Nuff</p>
+                <p id="answerTwo">Me and you, your momma and your cousins too</p>
+                <p id="answerThree">Dylan, Dylan, Dylan and Dylan</p>
+                
+                <h2 id="questionTwo">What does Bruce Leroy leave behind after defending Laura?</h2>
+                <p id="answerFour">His glass slipper</p>
+                <p id="answerFive">His marbles</p>
+                <p id="answerSix">His dragon pendant</p>
 
 
-</div>
-<script
-src="https://code.jquery.com/jquery-3.4.1.min.js"
-integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
-crossorigin="anonymous"></script>
-<script src="assets/javascript/app.js"></script>
+                <h3 id="questionThree">What kind of factory does Bruce Leroy's sensei take him to?</h3>
+                <p id="answerSeven">Cheesecake Factory</p>
+                <p id="answerEight">Fortune Cookie Factory</p>
+                <p id="answerNine">Spaghetti Factory</p>
+
+
+
+                <h4 id="questionFour">You are a..</h4>
+                <h5 id="questionFive">Sho'Nuff is known as</h5>
+
+                <h4 class="choice" id="a"></h4>
+                <h4 class="choice" id="b"></h4>
+                <h4 class="choice" id="c"></h4>
+            </div>
+            <div id="submit"> <button id="submit-btn">submit</button></div>
+
+        </div>
+        <div class="hidden" id="score">
+            Wins:
+            Losses:
+        </div>
+
+
+    </div>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="assets/javascript/app.js"></script>
 </body>
+
 </html>

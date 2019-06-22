@@ -5,57 +5,13 @@ var unanswered = 0;
 var questionNumber = 0;
 var time = 3;
 var timer
-
-var quiz = [
-  {
-    question: "Who's the master",
-    answers: {
-      choiceA: "Sho Nuff",
-      choiceB: "Me and you, your mommma and your cousins too",
-      choiceC: "The five members of the band Dylan, Dylan, Dylan, Dylan and Dylan",
-    }
-  },
-
-  {
-    question: "What does Bruce Leroy leave behind after defending Laura",
-    answer: {
-      choiceA: "His glass slipper",
-      choiceB: "His marbles",
-      choiceC: "His dragon pendant",
-    }
-  },
-
-  {
-    question: "What kind of factory does Bruce Leroy's sensei take him to?",
-    answers: {
-      choiceA: "Cheesecake Factory",
-      choiceB: "Fortune cookie factory",
-      choiceC: "Spaghetti factory",
-    }
-  },
-
-  {
-    question: "You are a..",
-    answers: {
-      choiceA: "string bean, Rick James looking fool",
-      choiceB: "the master",
-      choiceC: "here so I don't get fined",
-    }
-  },
-
-  {
-    question: "Sho'Nuff is known as",
-    answers: {
-      choiceA: "The Shogun of Harlem",
-      choiceB: "The best who had ever lived",
-      choiceC: "TIP",
-    }
-  },
+var question = document.getElementById("question");
+// var choiceA1 = document.getElementById("A");
+var choiceB = document.getElementById("B");
+var choiceC = document.getElementById("C");
 
 
 
-
-]
 
 
 
@@ -68,7 +24,11 @@ function countDown() {
   }
   else if (time === 0) {
     $("#clock").addClass("hidden");
-    $("#sumbit").removeClass("hidden")
+    $("#sumbit").removeClass("hidden");
+    $("#quiz").addClass("hidden");
+    $("#score").removeClass("hidden");
+    $("#score").html("<p> Correct:" + correct + "</p>" + "<p> Wrong:" + wrong + "</p>")
+
   }
 }
 
@@ -78,23 +38,116 @@ $("#start-btn").on("click", function () {
   timer = setInterval(countDown, 1000)
 })
 
-fun
-function loadQuestion() {
+
+var answerPicked=false
+var answerPicked2=false
+
+document.getElementById("answerOne").addEventListener("click", myFunction);
+
+function myFunction() {
+  if (answerPicked===false){
+    answerPicked = true
+    document.getElementById("answerOne").innerHTML = "Correct!";
+    correct = correct +1
+  console.log(this)
+}}
+
+document.getElementById("answerTwo").addEventListener("click", myFunction2);
+
+function myFunction2() {
+  if (answerPicked===false){
+    answerPicked = true
+  document.getElementById("answerTwo").innerHTML = "Wrong!";
+  wrong = wrong +1
+}}
+
+document.getElementById("answerThree").addEventListener("click", myFunction3);
+function myFunction3() {
+  if (answerPicked===false){
+    answerPicked = true
+  document.getElementById("answerThree").innerHTML = "Wrong!";
+  wrong = wrong +1
+}}
 
 
-  var targetDiv = document.getElementById("quiz");
-  for (var i = 0; i < quiz.length; i++); {
-    var quiz = document.createElement("div");
-    quiz.textContent = quiz[i];
-    targetDiv.appendChild(quiz);
-
-    $()
-
-  }
 
 
 
+document.getElementById("answerFour").addEventListener("click", myFunction4);
+function myFunction4() {
+  if (answerPicked2===false){
+    answerPicked = true
+    document.getElementById("answerFour").innerHTML = "Wrong!";
+wrong = wrong +1
+}}
 
-  questionNumber++
+document.getElementById("answerFive").addEventListener("click", myFunction5);
+function myFunction5() {
+  if (answerPicked2===false){
+    answerPicked = true
+  document.getElementById("answerFive").innerHTML = "Wrong!";
+  wrong = wrong +1
+}}
 
-}
+document.getElementById("answerSix").addEventListener("click", myFunction6);
+function myFunction6() {
+  if (answerPicked2===false){
+    answerPicked = true
+  document.getElementById("answerSix").innerHTML = "Correct!";
+  correct= correct +1
+}}
+
+// var currentQuestion = 0;
+
+// // function loadQuestion() {
+//   var q = questions[currentQuestion];
+//   question.innerHTML = "<p>" + q.question + "</p>";
+//   choiceA.innerHTML = q.choiceA;
+//   choiceB.innerHTML = q.choiceB;
+//   choiceC.innerHTML = q.choiceC;
+// }
+
+// currentQuestion();
+// var questionOne = [
+//   "Who's the master?",
+// ];
+
+// document.getElementById("question").innerHTML = questionOne;
+// document.getElementById("question").innerHTML = questionOne;
+
+// var questionTwo = [
+
+
+//     question2: "What does Bruce Leroy leave behind after defending Laura?",
+//     choiceA2: "His glass slipper",
+//     choiceB2: "His marbles",
+//     choiceC2: "His dragon pendant",
+//     question3: "What kind of factory does Bruce Leroy's sensei take him to?",
+//     choiceA3: "Cheesecake Factory",
+//     choiceB3: "Fortune cookie factory",
+//     choiceC3: "Spaghetti factory",
+//     question4: "You are a..",
+//     choiceA4: "string bean, Rick James looking fool",
+//     choiceB4: "the master",
+//     choiceC4: "here so I don't get fined",
+//     question5: "Sho'Nuff is known as",
+//     choiceA5: "The Shogun of Harlem",
+//     choiceB5: "The best who had ever lived",
+//     choiceC5: "TIP",
+//   };
+
+
+// document.getElementById("question").innerHTML = question1;
+
+
+
+//     $()
+
+//   }
+
+
+
+
+//   questionNumber++
+
+// }
